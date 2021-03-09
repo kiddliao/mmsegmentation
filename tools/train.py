@@ -118,6 +118,9 @@ def main():
     logger.info(f'Distributed training: {distributed}')
     logger.info(f'Config:\n{cfg.pretty_text}')
 
+    with open(os.path.join(args.work_dir, 'lh_{}.py'.format(args.config.split('/')[1])),'w') as f:
+        f.write(cfg.pretty_text)
+
     # set random seeds
     if args.seed is not None:
         logger.info(f'Set random seed to {args.seed}, deterministic: '

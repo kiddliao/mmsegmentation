@@ -10,6 +10,11 @@ def cityscapes_classes():
         'bicycle'
     ]
 
+def deepglobe_classes():
+    """DeepGlobe class names for external use."""
+    return [
+        'background', 'road'
+    ]
 
 def ade_classes():
     """ADE20K class names for external use."""
@@ -59,6 +64,9 @@ def cityscapes_palette():
             [255, 0, 0], [0, 0, 142], [0, 0, 70], [0, 60, 100], [0, 80, 100],
             [0, 0, 230], [119, 11, 32]]
 
+def deepglobe_palette():
+    """DeepGlobe palette for external use."""
+    return [[0, 0, 0], [128, 255, 255]]  # 黑色和青色
 
 def ade_palette():
     """ADE20K palette for external use."""
@@ -114,7 +122,8 @@ def voc_palette():
 dataset_aliases = {
     'cityscapes': ['cityscapes'],
     'ade': ['ade', 'ade20k'],
-    'voc': ['voc', 'pascal_voc', 'voc12', 'voc12aug']
+    'voc': ['voc', 'pascal_voc', 'voc12', 'voc12aug'],
+    'deepglobe': ['deepglobe']
 }
 
 

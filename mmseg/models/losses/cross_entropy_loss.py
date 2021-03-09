@@ -159,7 +159,8 @@ class CrossEntropyLoss(nn.Module):
                  loss_weight=1.0):
         super(CrossEntropyLoss, self).__init__()
         assert (use_sigmoid is False) or (use_mask is False)
-        self.use_sigmoid = use_sigmoid
+        # self.use_sigmoid = True
+        self.use_sigmoid = use_sigmoid # lh note
         self.use_mask = use_mask
         self.reduction = reduction
         self.loss_weight = loss_weight
